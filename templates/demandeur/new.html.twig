@@ -1,0 +1,14 @@
+ {% extends 'base.html.twig' %}  
+
+{# {% block title %}New Demandeur{% endblock %} #}
+
+ {% block body %} 
+    
+  <div class="mt-5 pt-5 col-md-8">
+    <h1>Create new Demandeur</h1>
+
+    {{ include('demandeur/_form.html.twig') }}
+
+    <a href="{{ path('demandeur_index') }}">back to list</a>
+  </div>
+{% endblock %} 

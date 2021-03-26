@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CV{% endblock %}
+
+{% block body %}
+<div class="mt-5 pt-5 col-md-8">
+    <h1>CV</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ c_v.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ c_v.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ c_v.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ c_v.age }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ c_v.address }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ c_v.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ c_v.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Specialite</th>
+                <td>{{ c_v.specialite }}</td>
+            </tr>
+            <tr>
+                <th>NiveauEtude</th>
+                <td>{{ c_v.niveauEtude }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ c_v.experience }}</td>
+            </tr>
+        </tbody>
+    </table>
+   </div>
+    <a href="{{ path('cv_index') }}">back to list</a>
+
+    <a href="{{ path('c_v_edit', {'id': c_v.id}) }}"><input name="login" id="login" class="btn btn-block login-btn " type="button" value="EDIT"></a>
+
+    {{ include('cv/_delete_form.html.twig') }}
+ 
+{% endblock %}

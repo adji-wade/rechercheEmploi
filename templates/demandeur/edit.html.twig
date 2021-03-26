@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Demandeur{% endblock %}
+
+{% block body %}
+ <div class="mt-5 pt-5 col-md-8">
+    <h1>Edit Demandeur</h1>
+
+    {{ include('demandeur/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('demandeur_index') }}">back to list</a>
+
+    {{ include('demandeur/_delete_form.html.twig') }}
+    </div>
+{% endblock %}
